@@ -1,6 +1,8 @@
 body {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 90vh;
     user-select: none;
     background-color: #4d4d4d;
 }
