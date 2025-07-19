@@ -1,0 +1,166 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    user-select: none;
+    background-color: #4d4d4d;
+}
+
+.interactive-system {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000000b4;
+    color: #4bd050;
+    padding: 20px;
+    border-radius: 5px;
+    width: 13rem;
+    height: 16rem;
+    grid-column: 11/16;
+    grid-row: 4/10;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+    padding-bottom: 2.5rem;
+}
+
+.interactive-system h1 {
+    text-align:center; 
+}
+
+#myForm {
+    display: grid;
+    grid-template-columns: repeat(13, 0.95rem);
+    grid-template-rows: repeat(5, 1.3rem);
+}
+
+.namee {
+    grid-column: 3/7;
+    grid-row: 1;
+}
+
+#namee {
+    grid-column: 3/12;
+    grid-row: 2;
+    border-radius: 0.2rem;
+    background-color: #00000044;
+    color: #c7c7c7;
+}
+
+.age {
+    grid-column: 3/7;
+    grid-row: 4;
+}
+
+#age {
+    
+    grid-column: 3/7;
+    grid-row: 5;
+    border-radius: 0.2rem;
+    background-color: #00000044;
+    color: #c7c7c7;
+}
+
+/* 
+.info: This class is used for the information icon container next to the age input.
+- display: flex;                // Aligns children in a row, centers them vertically.
+- align-items: center;          // Vertically centers the icon with any text.
+- grid-column: 7/12;            // Places the icon in columns 7 to 12 of the grid.
+- grid-row: 5;                  // Places the icon in row 5 of the grid.
+- color: #c7c7c7;               // Sets the text/icon color to light gray.
+*/
+.info {
+    display: flex;
+    align-items: center;
+    grid-column: 7/12;
+    grid-row: 5;
+    color: #c7c7c7;
+}
+
+/* 
+.info::after: Adds a custom information icon after the .info span.
+- content: "";                  // Creates an empty pseudo-element.
+- width/height: 35px;           // Sets the icon size.
+- margin-left: 6px;             // Adds space between the input and the icon.
+- background-image: ...         // Sets the info icon image.
+- background-repeat: no-repeat; // Prevents the image from repeating.
+- cursor: pointer;              // Shows a pointer cursor on hover.
+*/
+.info::after {
+    content: "";
+    width: 35px;
+    height: 35px;
+    margin-left: 6px;
+    background-image: url('/SistemaInteractivo/img/informacion.png');
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+/* 
+.tooltip: Styles the tooltip that appears when hovering over the info icon.
+- display: none;                // Hidden by default.
+- position: absolute;           // Positioned relative to the .info container.
+- justify-content: center;      // Centers the tooltip content.
+- transform: translateY(-100%); // Moves the tooltip above the icon.
+- background: #232f23;          // Dark background for contrast.
+- color: #4bd050;               // Green text for visibility.
+- padding: 0.5rem 1rem;         // Adds space inside the tooltip.
+- border-radius: 0.4rem;        // Rounded corners.
+- font-size: 0.95rem;           // Slightly smaller text.
+- white-space: nowrap;          // Prevents text from wrapping.
+- box-shadow: ...               // Adds a shadow for depth.
+- z-index: 10;                  // Ensures tooltip appears above other elements.
+*/
+.tooltip {
+    display: none;
+    position: absolute;
+    justify-content: center;
+    transform: translateY(-100%);
+    background: #232f23;
+    color: #4bd050;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px #0006;
+    z-index: 10;
+}
+
+/* 
+Shows the tooltip when the user hovers or focuses on the info icon.
+*/
+.info:hover .tooltip,
+.info:focus .tooltip {
+    display: block;
+}
+
+button {
+    grid-column: 3/12;
+    grid-row: 7;
+    margin-top: 0.9rem;
+    border-radius: 0.4rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #c7c7c7;
+    background: linear-gradient(90deg, #232f23 60%, #4bd050 100%);
+    border: 2px solid #4bd050;
+    font-weight: bold;
+    font-size: 1.08rem;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px #0006;
+    cursor: pointer;
+    padding: 0.4rem 1.2rem;
+    transition: 
+        background 0.2s,
+        color 0.2s,
+        box-shadow 0.2s,
+        transform 0.1s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #4bd050 60%, #232f23 100%);
+    color: #232f23;
+    box-shadow: 0 4px 16px #4bd05088;
+    transform: translateY(-2px) scale(1.04);
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: 0 1px 4px #0008;
+}

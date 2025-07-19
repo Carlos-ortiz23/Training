@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Sets the character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Makes the page responsive on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title that appears in the browser tab -->
+    <title>CSS Ninja</title>
+    <!-- Link to the external CSS file for all styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header section: contains the main title and a subtitle with animation -->
+    <header>
+        <h1>Welcome to CSS Ninja Training</h1>
+        <!-- The subtitle will have each letter animated (see the script at the bottom) -->
+        <p>Become a master of CSS style and effects!</p>
+    </header>
+
+    <!-- Main content area: uses flexbox to center and arrange the sections -->
+    <main class="main-content">
+        <!-- Each section below is a content box with a metallic gradient background -->
+        <section class="content">
+            <h2>CSS Selectors and Specificity</h2>
+        </section>
+
+        <section class="content">
+            <h2>Visual Customization</h2>
+        </section>
+
+        <section class="content">
+            <h2>Interactive Elements</h2>
+        </section>
+    </main>
+
+    <!-- Footer: stays at the bottom, contains a message and a link with hover effect -->
+    <footer>
+        <p>Created by a CSS Ninja in training</p>
+        <a href="https://dictionary.cambridge.org/es/diccionario/ingles-espanol/check">Hover over me</a>
+    </footer>
+
+    <!-- JavaScript to animate each letter in the header's paragraph -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const headerP = document.querySelector("header p");
+            if (headerP) {
+                const text = headerP.textContent;
+                headerP.innerHTML = "";
+                for (let i = 0; i < text.length; i++) {
+                    const span = document.createElement("span");
+                    span.textContent = text[i];
+                    span.style.animationDelay = (i * 0.07) + "s";
+                    headerP.appendChild(span);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

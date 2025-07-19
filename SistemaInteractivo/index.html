@@ -1,0 +1,37 @@
+<!-- This is the main HTML structure for the interactive system page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Responsive design for different devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title shown in the browser tab -->
+    <title>Sistema interactivo</title>
+    <!-- Link to the external CSS file for styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main section for the interactive system -->
+    <section class="interactive-system">
+        <!-- Main heading of the page -->
+        <h1>Sistema interactivo</h1>
+        <!-- Form for user input (name and age) -->
+        <form id="myForm">
+            <!-- Label and input for the user's name -->
+            <label for="namee" class="namee">Nombre:</label>
+            <input type="text" id="namee" placeholder="Ingrese su nombre" required>
+            <!-- Label and input for the user's age -->
+            <label for="age" class="age">Edad:</label>
+            <input type="number" id="age" placeholder="18" required>
+            <span type="i" class="info">
+                <span class="tooltip">Ingrese su edad.</span>
+            </span>
+            <!-- Submit button to validate the form -->
+            <button type="submit">Validar</button>
+        </form>
+    </section>
+    <!-- Link to the external JavaScript file for interactivity -->
+    <script src="sistema_interactivo.js" defer></script>
+</body>
+</html>

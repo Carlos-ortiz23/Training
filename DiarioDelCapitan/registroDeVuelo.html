@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diario de Vuelo - Misión a Saturno</title>
+    <link rel="stylesheet" href="estilos.css"><!-- Opcional: hoja de estilos -->
+</head>
+<body>
+    <header>
+        <h1>Diario de Vuelo</h1>
+        <p>Misión: Exploración de Saturno</p>
+        <nav>
+            <ul>
+                <li><a href="#resumen">Resumen</a></li>
+                <li><a href="#tripulacion">Tripulación</a></li>
+                <li><a href="#registro">Registro de Vuelo</a></li>
+                <li><a href="#bitacora">Bitácora</a></li>
+                <li><a href="#galeria">Galería</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="resumen">
+            <h2>Resumen de la Misión</h2>
+            <p>
+                La misión a Saturno tiene como objetivo principal el estudio de sus anillos y lunas principales. 
+                El viaje está programado para durar 7 años, incluyendo el trayecto de ida y vuelta.
+            </p>
+        </section>
+        <section id="tripulacion">
+            <h2>Tripulación</h2>
+            <ul>
+                <li>Capitán: Carlos Ortiz</li>
+                <li>Piloto: Ana Martínez</li>
+                <li>Ingeniero: Luis Fernández</li>
+                <li>Científica: Sofía Ramírez</li>
+            </ul>
+        </section>
+        <section id="registro">
+            <h2>Registro de Vuelo</h2>
+            <article>
+                <h3>Fecha: 04/07/2025</h3>
+                <p>
+                    Despegue exitoso desde la Tierra. Todos los sistemas funcionan correctamente. 
+                    Se inicia la trayectoria hacia Saturno.
+                </p>
+            </article>
+            <!-- Puedes agregar más artículos para cada día o evento -->
+        </section>
+        <section id="bitacora">
+            <h2>Bitácora del Capitán</h2>
+            <form>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                <br>
+                <label for="entrada">Entrada:</label>
+                <textarea id="entrada" name="entrada" rows="5" required></textarea>
+                <br>
+                <button type="submit">Guardar Entrada</button>
+            </form>
+        </section>
+        <section id="galeria">
+            <h2>Galería de Imágenes</h2>
+            <figure>
+                <img src="img/saturno.jpg" alt="Saturno visto desde la nave" width="300">
+                <figcaption>Saturno visto desde la nave</figcaption>
+            </figure>
+            <!-- Puedes agregar más imágenes -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Diario del Capitán. Misión a Saturno.</p>
+    </footer>
+</body>

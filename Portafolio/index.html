@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <!-- Main styles -->
+    <link rel="stylesheet" href="styles.css"> 
+    <!-- Font Awesome icons: I used this site which allowed me to add icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="description" content="Personal portfolio of Carlos Ortiz as a Riwi developer.">
+</head>
+<body>
+    <main>
+        <!-- Main title -->
+        <h1>Carlos Ortiz - Riwi Developer</h1>
+        <!-- Fixed navigation menu -->
+        <header>
+            <nav>
+                <a href="#about" class="options">About Me</a>
+                <a href="#projects" class="options">Projects</a>
+                <a href="#contact" class="options">Contact</a>
+            </nav>
+        </header>
+        <!-- Section About Me -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-container">
+                <div class="about-img">
+                    <!-- Profile photo -->
+                    <img src="/Portafolio/img/my_photo.jpg" alt="Carlos Ortiz photo"/>
+                </div>
+                <div class="about-content">
+                    <p>
+                        I'm <strong>Carlos Ortiz</strong>, a Software Development student at <strong>Riwi</strong>, passionate about creating technological solutions that break away from the conventional.
+                    </p>
+                    <p>
+                        What sets me apart as a developer in training is my creative mindset and ability to think outside the box, always aiming to bring innovative ideas that make a real difference.
+                    </p>
+                    <!-- Main skills -->
+                    <ul class="about-skills">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>Git/Github</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <!-- Individual project card -->
+                <article class="project-card" id="proyect1">
+                    <figure>
+                        <img src="/Portafolio/img/bookstorep.png" alt="Bookstore project screenshot" width="260"/>
+                        <figcaption>Bookstore Project Screenshot</figcaption>
+                    </figure>
+                    <p>
+                        I developed a sales and inventory management system for a bookstore using Python.
+                    </p>
+                    <ul class="project-tech">
+                        <li>Python</li>
+                    </ul>
+                </article>
+            </div>
+
+            <!-- Project summary table -->
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Project Name</th>
+                        <th scope="col">Technologies Used</th>
+                        <th scope="col">Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bookstore</td>
+                        <td>Python</td>
+                        <td><a href="#proyect1">View Project</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <form action="/Portafolio/index.html" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Feel free to leave a message"></textarea>
+                
+                <button type="submit" >Send</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Fixed footer with social networks -->
+    <footer>
+        <div class="footer-social">
+        <a href="https://github.com/Carlos-ortiz23" target="_blank" class="iconos" title="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/tu-linkedin" target="_blank" class="iconos" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://stackoverflow.com/users/tu-stackoverflow" target="_blank" class="iconos" title="Stack Overflow">
+            <i class="fab fa-stack-overflow"></i>
+        </a>
+        </div>
+        <div class="footer-text">
+            © 2025 Carlos Ortiz. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <meta name="description" content="login tab.">
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script>
+        // Verificación que CryptoJS está cargado
+        window.addEventListener('load', () => {
+            if (typeof CryptoJS === 'undefined') {
+                alert('ERROR: CryptoJS no se cargó correctamente');
+            } else {
+                console.log('CryptoJS cargado correctamente');
+            }
+        });
+    </script>   
+</head>
+
+<body>
+    <main>
+        <picture>
+            <img src="./img/moodle_login.jpg" alt="Picture of some coders smiling.">
+        </picture>
+        <section class="login">
+            <header>
+                <img src="./img/Imagen1.png" alt="Logo de riwi" class="logo">
+            </header>
+            <form id="loginForm" method="POST">
+                <p id="alert" class="alertLogin errorLogin"></p>
+                <div class="input-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <div class="button-align">
+                    <button type="submit" class="button-login">Login</button>
+                </div>
+            </form>
+            <footer>
+                <p>Don't have an account? <a href="/register">Register here</a></p>
+            </footer>
+        </section>
+    </main>
+    <script type="module" src="./src/js/main.js"></script>
+</body>
+
+</html>
